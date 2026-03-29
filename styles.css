@@ -1,0 +1,110 @@
+:root {
+    --green: #39ff14;
+    --dark: #07090f;
+    --text: #b8cfe0;
+    --white: #eef5ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: var(--dark);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', monospace;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--dark);
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.nav-logo {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+#intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem 2rem 2rem; /* 6rem uppe för att ge plats åt navbaren */
+    background: var(--dark);
+}
+
+#penalty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+#story {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2 rem;
+    background: #0d1020;
+}
+
+.story-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.story-container h2 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 2rem;
+}
+
+.story-container p {
+    font-size: 1rem;
+    line-height: 2;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
