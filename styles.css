@@ -108,3 +108,369 @@ nav a:hover {
     color: var(--text);
     margin-bottom: 1.5rem;
 }
+
+/* --------- kodningsrummet -------*/
+#coding {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d1020;
+    padding: 6rem 2rem;
+}
+
+.room {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    background: #1a1a2e;
+    border: 2px solid rgba(57, 255, 20, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.room-wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65%;
+    background: #16213e;
+}
+
+.room-floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: #0f3450;
+}
+
+.desk {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 20px;
+    background: #8b4513;
+    border-radius: 2px;
+    box-shadow: 0 8px 0 #5c2d0a;
+}
+
+.monitor {
+    position: absolute;
+    bottom: calc(35% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.monitor-screen {
+    width: 160px;
+    height: 120px;
+    background: #000c18;
+    border: 6px solid #555;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.monitor-screen:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+}
+
+.monitor-stand {
+    width: 20px;
+    height: 20px;
+    background: #555;
+    margin: 0 auto;
+}
+
+.monitor-base {
+    width: 60px;
+    height: 8px;
+    background: #555;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.monitor-glow {
+    width: 100%;
+    height: 100%;
+    background: #001a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------- Jag som sitter vid datorn -----------*/
+.room-character {
+    position: absolute;
+    bottom: calc(35% + 20px);
+    left: 35%;
+    transform: translateX(-50%);
+}
+
+.character-head {
+    width: 30px;
+    height: 30px;
+    background: #f5c5a3;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.character-body {
+    width: 40px;
+    height: 45px;
+    background: #1a1aff;
+    margin: 0 auto;
+}
+
+.character-legs {
+    width: 40px;
+    height: 25px;
+    background: #111;
+    margin: 0 auto;
+}
+
+.window {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 120px;
+    height: 100px;
+    background: #001a33;
+    border: 6px solid #8b6914;
+    border-radius: 2px;
+}
+
+.window-pane {
+ position: absolute;
+ top: 50%;
+ left: 0;
+ right: 0;
+ height: 3px;
+ background: #8B6914;   
+}
+
+.chair {
+    bottom: calc(35% + 18px);
+    left: 46%;
+    width: 50px;
+    height: 8px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* ----- OS ------- */
+.os-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+.os-overlay.active {
+    display: flex;
+}
+
+.os-desktop {
+    width: 600px;
+    height: 400px;
+    background: #008080;
+    border: 3px solid #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+}
+
+.os-topbar {
+    background: #000080;
+    color: white;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.os-close {
+    cursor: pointer;
+    background: #c0c0c0;
+    color: black;
+    padding: 2px 6px;
+    border: 2px solid #fff;
+}
+
+.os-close:hover {
+    background: red;
+    color: white;
+}
+
+.os-screen {
+    padding: 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.os-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+.os-icon:hover {
+    opacity: 0.8;
+}
+
+.os-folder {
+    font-size: 2.5rem;
+}
+
+/* ---- CV-SEKTION ----- */
+#cv {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+    background: var(--dark);
+}
+
+.cv.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+-cv-container h2 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 3rem;
+}
+
+.cv-block {
+    margin-bottom: 3rem;
+}
+
+.cv-block h3 {
+    font-size: 0.9rem;
+    color: var(--white);
+    border-bottom: 1px solid rgba(0, 255, 20, 0.3);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.cv-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.cv-date {
+    font-size: 0.7rem;
+    color: var(--green);
+    min-width: 120px;
+    padding-top: 4px;
+}
+
+.cv-info strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.cv-info p {
+    color: var(--text);
+    font-size: 0.75rem;
+    line-height: 1.8;
+}
+
+/* ------ PORTFOLIO ------ */
+#portfolio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2 rem;
+    background: #0d1020;
+}
+
+.portfolio-container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.portfolio-container h2 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 3rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;  
+}
+
+.portfolio-card {
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+    max-width: 300px;
+}
+
+.portfolio-card:hover {
+    border-color: var(--green);
+}
+
+.card-top {
+    height: 150px;
+    background: #1a2a1a;
+}
+
+-card-info {
+    padding: 1.2rem;
+}
+
+.card-info h3 {
+    font-size: var(--white);
+    margin-bottom: 0.8rem;
+}
+
+.card-info p {
+    font-size: 0.7rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.card-info a {
+    font-size: 0.7rem;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.card-info a:hover {
+    text-decoration: underline;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark);
+    border-top: 1px solid rgba(57, 255, 20, 0.1);
+    font-size: 0.65rem;
+    color: rgba(184, 207, 224, 0.3);
+    line-height: 2.5;
+}
