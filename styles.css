@@ -117,47 +117,78 @@ nav a:hover {
     align-items: center;
     background: #0d1020;
     padding: 6rem 2rem;
-}
-
-.room {
-    position: relative;
-    width: 700px;
-    height: 450px;
-    background: #1a1a2e;
-    border: 2px solid rgba(57, 255, 20, 0.2);
-    border-radius: 4px;
     overflow: hidden;
 }
 
-.room-wall {
+.room {
+     width: 500px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(60deg) rotateZ(45deg);
+}
+
+.wall-left {
     position: absolute;
+    width: 500px;
+    height: 200px;
+    background: #1a1a2e;
     top: 0;
     left: 0;
-    right: 0;
-    height: 65%;
+    transform: rotateX(90deg);
+    transform-origin: 0 0;
+    transform-style: preserve-3d;
+}
+
+.wall-right {
+    position: absolute;
+    width: 500px;
+    height: 500px;
     background: #16213e;
+    top: 0;
+    left: 0;
+    transform: rotateY(-90deg);
+    transform-origin: left center;
+    transform-style: preserve-3d;
+}
+
+.room-wall {
+    display: none;
 }
 
 .room-floor {
     position: absolute;
-    bottom: 0;
+    width: 500px;
+    height: 500px;
+    background: #2a1f3d;
+    top: 0;
     left: 0;
-    right: 0;
-    height: 35%;
-    background: #0f3450;
+    transform-style: preserve-3d;
 }
 
-.desk {
+.iso-desk {
     position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px;
-    height: 20px;
-    background: #8b4513;
-    border-radius: 2px;
-    box-shadow: 0 8px 0 #5c2d0a;
+    width: 120px;
+    height: 200px;
+    background: #8B4513;
+    top: 0;
+    left: 0px;
+    transform: translateZ(75px);
+    transform-style: preserve-3d;
 }
+
+.iso-desk::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: -10px;
+    transform: translateZ(-75px);
+    transform-style: preserve-3d;
+}
+
 
 .monitor {
     position: absolute;
