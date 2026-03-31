@@ -189,6 +189,42 @@ nav a:hover {
     transform-style: preserve-3d;
 }
 
+.desk-front {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background: #6b3410;
+    bottom: 0;
+    left: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+}
+
+.desk-rightside {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: #5c2d0a;
+    top: 100;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+
+.desk-leftside {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    background: #5c2d0a;
+    top: 0;
+    right: 20;
+    transform: rotateX(-90deg);
+    transform-origin: center;
+    transform-style: preserve-3d;
+}
+
 
 .monitor {
     position: absolute;
