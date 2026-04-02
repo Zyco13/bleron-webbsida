@@ -215,52 +215,63 @@ nav a:hover {
 
 .desk-leftside {
     position: absolute;
-    width: 100px;
-    height: 250px;
-    background: #5c2d0a;
-    top: 0;
-    right: 20;
-    transform: rotateX(-90deg);
-    transform-origin: center;
+    width: 10px;
+    height: 100px;
+    background: #6b3410;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
     transform-style: preserve-3d;
 }
 
 
-.monitor {
+.iso-monitor {
     position: absolute;
-    bottom: calc(35% + 20px);
-    left: 50%;
-    transform: translateX(-50%);
+    width: 70px;
+    height: 60px;
+    background: transparent;
+    top: 20px;
+    left: 20px;
+    transform: translateZ(110px);
+    transform-style: preserve-3d;
 }
 
-.monitor-screen {
-    width: 160px;
-    height: 120px;
-    background: #000c18;
-    border: 6px solid #555;
-    border-radius: 4px;
-    margin: 0 auto;
+.monitor-screen-iso {
+    position: absolute;
+    width: 70px;
+    height: 55px;
+    background: #001a00;
+    border: 3px solid #333;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    transform: rotateX(-90deg) rotateY(90deg);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
 }
 
-.monitor-screen:hover {
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+.monitor-stand-iso {
+    position: absolute;
+    width: 6px;
+    height: 15px;
+    background: #333;
+    top: 55px;
+    left: 32px;
+    transform-style: preserve-3d;
 }
 
-.monitor-stand {
-    width: 20px;
-    height: 20px;
-    background: #555;
-    margin: 0 auto;
-}
-
-.monitor-base {
-    width: 60px;
+.monitor-base-iso {
+    position: absolute;
+    width: 40px;
     height: 8px;
-    background: #555;
-    border-radius: 3px;
-    margin: 0 auto;
+    background: #333;
+    top: 68px;
+    left: 15px;
+    transform-style: preserve-3d;  
+}
+
+.monitor-screen-iso:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
 }
 
 .monitor-glow {
@@ -540,4 +551,41 @@ footer {
     font-size: 0.65rem;
     color: rgba(184, 207, 224, 0.3);
     line-height: 2.5;
+}
+
+/* ---- Sängen ---- */
+
+.iso-bed {
+    position: absolute;
+    width: 130px;
+    height: 80px;
+    background: #4a3060;
+    top: 425px;
+    left: 10px;
+    transform: translateZ(40px);
+    transform-style: preserve-3d;
+}
+
+.bed-front {
+    position: absolute;
+    width: 130px;
+    height: 30px;
+    background: #3a2050;
+    bottom: 0;
+    left: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+}
+
+.bed-side {
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background: #2a1540;
+    top: 0;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
 }

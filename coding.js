@@ -1,9 +1,9 @@
-//const monitor = document.querySelector('.monitor-screen');
+const monitor = document.querySelector('.monitor-screen-iso');
 const osOverlay = document.getElementById('osOverlay');
 const osClose = document.getElementById('osClose');
 
 // Klicka på monitorn → öppna OS
-/*monitor.addEventListener('click', function() {
+monitor.addEventListener('click', function() {
     osOverlay.classList.add('active');
 });
 
@@ -31,4 +31,4 @@ iconPortfolio.addEventListener('click', function() {
 // Klicka på Bilder → visar ett meddelande för nu
 iconBilder.addEventListener('click', function() {
     alert('Bilder kommer snart!');
-}); */
+});
