@@ -113,6 +113,7 @@ nav a:hover {
 #coding {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #0d1020;
@@ -588,4 +589,55 @@ footer {
     transform: rotateY(-90deg);
     transform-origin: right;
     transform-style: preserve-3d;
+}
+
+
+/* ---- TECH STACK ---- */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    max-width: 600px;
+}
+
+.tech-title {
+    font-size: 1rem;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    letter-spacing: 4px;
+}
+
+.tech-tag {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: var(--green);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    animation: flicker 3s infinite;
+}
+
+.tech-tag:hover {
+    background: rgba(57, 255, 20, 0.1);
+    border-color: var(--green);
+}
+
+.tech-tag.tag-learning {
+    color: #00d4ff;
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.tech-tag.tag-learning:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
+}
+
+@keyframes flicker {
+    0%, 95%, 100% {opacity: 1; }
+    96% {opacity: 0.4; }
+    98% {opacity: 0.8; }
 }
